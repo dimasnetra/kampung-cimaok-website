@@ -1,0 +1,552 @@
+/* Reset dan Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: url("../images/cimaok-aerial.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+  z-index: -1;
+}
+
+/* Navigasi */
+nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+nav .logo {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00c4b4;
+  transform: translateY(-2px);
+}
+
+/* Header */
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.6),
+    rgba(0, 196, 180, 0.6)
+  );
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 4em;
+  font-weight: 700;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 1.2em;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: #ffffff;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00c4b4;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Section */
+section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease-out;
+  position: relative;
+  color: #333;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #00c4b4;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 30px auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  height: 450px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+/* Peta */
+#map {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(26, 26, 26, 0.98);
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  background-color: #00c4b4;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 1024px) {
+  /* Tablet */
+  header h1 {
+    font-size: 3em;
+  }
+
+  header p {
+    font-size: 1.3em;
+  }
+
+  .slogan {
+    font-size: 1em;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav .logo {
+    height: 50px;
+  }
+
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  section {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 900px;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  .slide img {
+    height: 350px;
+  }
+
+  #map {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablet Kecil */
+  header {
+    height: 80vh;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header p {
+    font-size: 1.1em;
+  }
+
+  .slogan {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  section {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .slide img {
+    height: 300px;
+  }
+
+  .prev,
+  .next {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  #map {
+    height: 200px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* HP */
+  header {
+    height: 70vh;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .slogan {
+    font-size: 0.8em;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.9em;
+  }
+
+  nav {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .logo {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .slide img {
+    height: 200px;
+  }
+
+  .prev,
+  .next {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  #map {
+    height: 150px;
+  }
+
+  .social-icons a {
+    margin: 0 5px;
+  }
+
+  .social-icons img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .scroll-top {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px;
+    font-size: 1em;
+  }
+}
